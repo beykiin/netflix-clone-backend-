@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block body %}
+  <div class="text-center w-50 m-auto mt-2 mb-5 bg-black bg-opacity-75" style=" border: 1px solid black; border-radius: 10px;">
+    <p class="text-light fw-bold fs-5 mt-5 mb-5">PROFİL OLUŞTUR</p>
+    <div class="text-start">
+        <form class="m-auto w-50 mt-2 mb-2 text-light bg-opacity-75 bg-dark p-4" style="border-radius: 10px;" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-danger mb-5 mt-5">Oluştur</button>
+          </form>
+          
+    </div>
+    
+  </div>
+
+
+{% endblock body %}
